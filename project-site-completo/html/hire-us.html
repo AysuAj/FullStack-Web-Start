@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX</title>
+  </head>
+  <body>
+    <header>
+      <a href="site-completo.html"
+        ><img src="../img/logo.png" alt="Logo SpaceX"
+      /></a>
+      <br /><br />
+      <nav>
+        <a href="spaceships.html">The SpaceShips</a>
+        <a href="hire-us.html">| Hire us</a>
+      </nav>
+    </header>
+    <hr />
+    <section>
+      <h2>Hire US Now</h2>
+      <p>
+        Leave a message to request one of our services and we will get back to
+        you as soons as possible.
+      </p>
+      <br />
+      <br />
+      <form action="">
+        <div>
+          <label for="select-name">Name:</label>
+          <input type="text" id="select-name" name="name" placeholder="Nome" />
+          <label for="select-email">- Email:</label>
+          <input
+            type="email"
+            id="select-email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <br />
+        <br />
+        <div>
+          <label for="select-spaceship">Spaceship:</label>
+          <select name="spaceship" id="select-spaceship">
+            <option value=" falcon9">Falcon 9</option>
+            <option value="falcon-heavy">Falcon Heavy</option>
+          </select>
+          <label for="select-service">| Type of Service:</label>
+          <input
+            type="search"
+            list="services"
+            id="select-service"
+            name="servicec"
+          />
+          <datalist id="services">
+            <option value="Leave a message to request"></option>
+            <option value="Leave a message"></option>
+            <option value="Leave"></option>
+          </datalist>
+        </div>
+        <br />
+        <br />
+        <input type="submit" name="submit" />
+      </form>
+    </section>
+  </body>
+</html>
+<img src="" alt="" />
