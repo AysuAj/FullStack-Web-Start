@@ -1,0 +1,11 @@
+#menu {
+  font-size: 20px;
+  background-color: rgb(0, 0, 22);
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+}
+
+#style-body {
+  background-color: rgb(0, 0, 22);
+  color: white;
+}
