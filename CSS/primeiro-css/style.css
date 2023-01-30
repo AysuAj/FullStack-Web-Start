@@ -1,0 +1,26 @@
+h1 {
+  color: rgb(37, 34, 34);
+  background-color: rgb(167, 226, 253);
+}
+
+body {
+  background-image: url("https://static.poder360.com.br/2022/10/spacex_launch_photo-848x477.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  opacity: 0.8;
+}
+
+li {
+  color: rgb(190, 190, 190);
+}
+
+ul {
+  border: 5px groove rgb(255, 160, 160);
+  
+}
+
+span {
+  color: white;
+  background-color: aquamarine;
+}
