@@ -1,0 +1,18 @@
+#week {
+  color: #f1c40f;
+}
+
+body {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.day {
+  background-color: #f1c40f;
+  color: black;
+  border: 2px solid black;
+}
+
+li[astronomy] {
+  color: #e74c3c;
+}

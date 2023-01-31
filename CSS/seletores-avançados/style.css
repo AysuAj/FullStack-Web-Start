@@ -1,1 +1,6 @@
- 
+li[teste] {
+  color: red;
+}
+ul p {
+  color: blue;
+}
