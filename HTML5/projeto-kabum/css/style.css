@@ -2,6 +2,7 @@
   font-size: 20px;
   background-color: rgb(0, 0, 22);
   color: white;
+  display: inline-block;
 }
 
 #menu a {
@@ -13,23 +14,40 @@
   padding: 10px;
 }
 
+h1[titulo-global] {
+  font-size: 20px;
+}
+
+div[glob] {
+  display: inline-block;
+  margin: 0px 100px 0px 0px;
+  text-align: center;
+  border: 10px dashed white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Aplica estilo no menu ao passar o mouse em cima */
 #menu a:hover {
   text-decoration: none;
   background-color: rgb(27, 27, 27);
   color: rgb(233, 233, 233);
 }
 
+/*Aplica estilo em todo o body*/
 #style-body {
   background-color: rgb(0, 0, 22);
   color: rgb(255, 255, 255);
-  padding: 100px;
+  margin: 50px;
+  padding: 0px 50px 0px 50px;
+  font-family: Cursive;
 }
 
 a[atrib-contato] {
   color: white;
   padding: 20px;
   display: inline-block;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   margin: 30px;
   text-decoration: none;
 }
@@ -43,4 +61,18 @@ a[atrib-contato]:hover {
 section[style-section] {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.border-ul {
+  margin: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+ul[ul-filho] {
+  margin: 50px;
+  border-bottom: 2px solid black;
+  margin-bottom: 40px;
 }
