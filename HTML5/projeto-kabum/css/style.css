@@ -22,7 +22,6 @@ div[glob] {
   display: inline-block;
   margin: 0px 100px 0px 0px;
   text-align: center;
-  border: 10px dashed white;
   padding: 20px;
   border-radius: 10px;
 }
@@ -44,17 +43,18 @@ div[glob] {
 }
 
 a[atrib-contato] {
-  color: white;
+  color: black;
   padding: 20px;
   display: inline-block;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 10px;
   margin: 30px;
   text-decoration: none;
 }
 
 a[atrib-contato]:hover {
-  background-color: rgb(209, 209, 209);
-  color: rgb(19, 19, 19);
+  background-color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -69,10 +69,44 @@ section[style-section] {
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   color: black;
+  padding: 80px;
 }
 
 ul[ul-filho] {
   margin: 50px;
   border-bottom: 2px solid black;
   margin-bottom: 40px;
+}
+
+form[style-form] {
+  background-color: white;
+  color: black;
+  padding: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+section[style-section-form] {
+  margin: 30px;
+  
+}
+
+#style-footer {
+  text-align: center;
+}
+
+section[style-section-contato] {
+  margin: 30px;
+  padding: 80px;
+  background-color: white;
+  color: black;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+}
+
+label {
+  padding: 10px;
 }
