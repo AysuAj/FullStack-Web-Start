@@ -1,0 +1,11 @@
+.publi {
+  border-bottom: 1px solid rgb(170, 170, 170);
+  padding: 40px;
+  background-color: whitesmoke;
+}
+
+#global {
+  margin: 0px auto 0px auto;
+  padding: 30px;
+  width: 60%;
+}
