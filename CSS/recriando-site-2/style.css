@@ -1,11 +1,26 @@
 .publi {
   border-bottom: 1px solid rgb(170, 170, 170);
-  padding: 40px;
-  background-color: whitesmoke;
+  padding: 30px;
+  font-family: "Open Sans";
+  background-color: #fffafa;
 }
 
 #global {
   margin: 0px auto 0px auto;
-  padding: 30px;
-  width: 60%;
+  padding: 0px 70px 70px 70px;
+  width: 70%;
+  background-color: #fffafa;  a
+}
+
+div[no-border] {
+  border: none;
+}
+
+.titulo {
+  font-family: "Montserrat";
+}
+
+.date {
+  color: #008080;
+  font-family: "Roboto";
 }
