@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamentos</title>
+</head>
+<body>
+  <header>
+    <figure>
+      <img src="../img/logo-al.png" alt="Logo da empresa AL Segurança Eletrônica">
+    </figure>
+    <h1>AL Segurança Eletrônica</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="orcamentos.html">Orçamento</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Faça um orçamento</h2>
+    <form action="">
+      <section>
+        <label for="select-name">Nome:</label>
+        <input type="text" id="select-name" placeholder="Nome" name="nome" required>
+        <label for="select-sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" placeholder="Sobrenome" >
+      </section>
+      <section>
+        <label for="select-email">Email: </label>
+        <input type="email" id="select-email" name="email" placeholder="Email" autocomplete="on">
+      </section>
+      <section>
+        <label for="selec-gender">Gênero:</label>
+        <input type="radio" id="select-male" name="gender" value="masculino">
+        <label for="select-male">Masculino</label>
+        <input type="radio" id="select-female" name="gender" value="feminino">
+        <label for="select-female">Feminino</label>
+        <input type="radio" id="select-other" name="gender" value="other">
+        <label for="select-other">Outro</label>
+      </section>
+      <section>
+        <label>Tipo de serviço necessário:</label>
+        <input type="checkbox" id="select-alarme" name="services" value="alarme">
+        <label for="select-alarme">Alarme</label>
+        <input type="checkbox" id="select-interfone" name="services" value="interfone">
+        <label for="select-interfone">Interfone</label>
+        <input type="checkbox" id="select-serralheria" name="services" value="serralheria">
+        <label for="select-serralheria">Serralheria</label>
+      </section>
+      <section>
+        <label for="select-text">Informe o seu problema:</label>
+        <textarea name="" id="" cols="60" rows="10" placeholder="Digite aqui..."></textarea>
+      </section>
+      <section>
+        <input type="submit">
+      </section>
+    </form>
+  </section>
+  <footer>
+    <p>AL Segurança Eletrônica</p>
+    <p>CNPJ, inscriçao,</p>
+    <address>Rua,n, bairro</address>
+  </footer>
+</body>
+</html>
