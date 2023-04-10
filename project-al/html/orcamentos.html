@@ -5,14 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orçamentos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <figure>
-      <img src="../img/logo-al.png" alt="Logo da empresa AL Segurança Eletrônica">
+      <img src="../img/logo-al-bg.png" alt="Logo da empresa AL Segurança Eletrônica">
     </figure>
     <h1>AL Segurança Eletrônica</h1>
-    <nav>
+    <nav id="menu">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="sobre.html">Sobre</a></li>
@@ -25,7 +29,7 @@
   <section>
     <h2>Faça um orçamento</h2>
     <form action="">
-      <section>
+      <section class="sec-name">
         <label for="select-name">Nome:</label>
         <input type="text" id="select-name" placeholder="Nome" name="nome" required>
         <label for="select-sobrenome">Sobrenome:</label>
@@ -54,15 +58,15 @@
         <label for="select-serralheria">Serralheria</label>
       </section>
       <section>
-        <label for="select-text">Informe o seu problema:</label>
-        <textarea name="" id="" cols="60" rows="10" placeholder="Digite aqui..."></textarea>
+        <label class="lab1" for="select-text">Informe o seu problema:</label>
+        <textarea class="lab1" name="" id="" cols="60" rows="10" placeholder="Digite aqui..."></textarea>
       </section>
       <section>
         <input type="submit">
       </section>
     </form>
   </section>
-  <footer>
+  <footer id="foot">
     <p>AL Segurança Eletrônica</p>
     <p>CNPJ, inscriçao,</p>
     <address>Rua,n, bairro</address>

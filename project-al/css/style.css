@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(37, 37, 39);
+  color: azure;
+  font-family: "Montserrat";
+  margin: 40px 5% 40px 5%;
+}
+
+figure {
+  display: inline-block;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 30px;
+}
+
+header {
+  border-bottom: 3px solid white;
+  padding-bottom: 30px;
+  margin: 40px;
+}
+
+
+section {
+  padding: 45px;
+}
+
+#menu {
+  left: 60%;
+  position: absolute;
+  display: inline;
+}
+
+#menu ul li{
+  display: inline-block;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+#menu ul li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  
+}
+
+#foot {
+  text-align: center;
+  left: 50%;
+  right: auto;
+  border-top: 2px solid white;
+  margin-top: 50px;
+  position: absolute;
+}
+
+.lab1 {
+  display: block;
+  padding: 10px;
+}
+
+.sec-name {
+
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
