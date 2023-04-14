@@ -1,30 +1,12 @@
-const nameCharacterAttack = prompt("Informe o nome do Personagem de ataque: ");
-const powerofAttack = prompt(
-  `Informe o poder de ataque do personagem ${nameCharacterAttack}: `
-);
+let num1 = prompt("Informe o primeiro número: ")
+let num2 = prompt("Informe o segundo número: ")
 
-const nameCharacterDef = prompt("Informe o nome do Personagem de defesa: ");
-const pointsOfLife = prompt(
-  `Informe a quantidade de pontos de vida do personagem ${nameCharacterDef}: `
-);
-const pointsOfDef = prompt(
-  `Informe quantos pontos de defesa tem esse personagem: ${nameCharacterDef}`
-);
-const shield = prompt(
-  `O personagem ${nameCharacterDef} possui escudo? 1 para sim | 2 para não: `
-);
+let soma = parseInt(num1) + parseInt(num2)
+let sub = num1 - num2
+let mult = num1 * num2
+let div = num1 / num2
 
-const resultAttack = powerofAttack - pointsOfDef;
-const resultAttackS = resultAttack / 2;
-
-if (powerofAttack > pointsOfDef && shield === false) {
-  alert(
-    `O personagem ${nameCharacterAttack} deu ${resultAttack} de dano no personagem ${nameCharacterDef}`
-  );
-} else if (powerofAttack > pointsOfDef && shield === true) {
-  alert(
-    `O personagem ${nameCharacterAttack} deu ${
-      resultAttack / 2
-    } de dano no personagem ${nameCharacterDef}`
-  );
-}
+alert(`A soma de ${num1} + ${num2} é igual a ${soma}\n
+      A subtraçao de ${num1} - ${num2} é igual a ${sub}\n
+      A multiplicação de ${num1} x ${num2} é igual a ${mult}\n
+      A divisão de ${num1} / ${num2} é igual a ${div}`)

@@ -1,12 +1,13 @@
-let veiculo1 = prompt("Informe o nome do primeiro veículo: ")
-let velocidade1 = prompt("Informe a velocidade do primeiro veículo: ")
-let veiculo2 = prompt("Informe o nome do segundo veículo: ")
-let velocidade2 = prompt("Informe a velocidade do segundo veículo: ")
+const data = new Date()
 
-if (velocidade1 > velocidade2) {
-  alert(`O veículo ${veiculo1} é mais rápido que o veículo ${veiculo2}`)
-} else if (velocidade2 > velocidade1) {
-  alert(`O veículo ${veiculo2} é mais rápido que o veículo ${veiculo1}`)
-} else {
-  alert(`O veículo ${veiculo1} e o veículo ${veiculo2} tem a mesma velocidade`)
-}
+let nome = prompt("Informe o seu nome: ")
+let sobrenome = prompt("Informe seu sobrenome: ")
+let estudo = prompt("Informe seu campo de estudo: ")
+let nascimento = prompt("Informe sua data de nascimento: ")
+
+let idade = data.getFullYear() - nascimento
+
+alert(`Seu nome é: ${nome}\n
+      Seu sobrenome é: ${sobrenome}\n
+      Seu campo de estudo é: ${estudo}\n
+      Sua idade é: ${idade}`) 
