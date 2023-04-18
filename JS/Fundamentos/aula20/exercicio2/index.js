@@ -1,41 +1,45 @@
-const resultAttack = 0;
-const resultAttackS = 0;
-const realAttack = 0;
-const resultAttacklife = 0;
+let resultAttack = 0;
+let resultAttackS = 0;
+let realAttack = 0;
+let resultAttacklife = 0;
+let wordShield;
 
-const nameCharacterAttack = prompt("Informe o nome do Personagem de ataque: ");
-const powerofAttack = prompt(
+let nameCharacterAttack = prompt("Informe o nome do Personagem de ataque: ");
+let powerofAttack = prompt(
   `Informe o poder de ataque do personagem ${nameCharacterAttack}: `
 );
 
-const nameCharacterDef = prompt("Informe o nome do Personagem de defesa: ");
-const pointsOfLife = prompt(
+let nameCharacterDef = prompt("Informe o nome do Personagem de defesa: ");
+let pointsOfLife = prompt(
   `Informe a quantidade de pontos de vida do personagem ${nameCharacterDef}: `
 );
-const pointsOfDef = prompt(
+let pointsOfDef = prompt(
   `Informe quantos pontos de defesa tem esse personagem: ${nameCharacterDef}`
 );
-const shield = prompt(
+let shield = prompt(
   `O personagem ${nameCharacterDef} possui escudo? 1 para sim | 2 para não: `
 );
 
 resultAttack = powerofAttack - pointsOfDef;
 resultAttackS = resultAttack / 2;
 
+powerofAttack = parseInt(powerofAttack)
+pointsOfDef = parseInt(pointsOfDef)
+
 if (shield == 1) {
-  const wordShield = "Sim";
+  wordShield = "Sim";
 } else {
-  wordShield == "Nao";
+  wordShield = "Nao";
 }
 
-if (powerofAttack > pointsOfDef && shield === false) {
+if ((powerofAttack > pointsOfDef) && (shield == 2)) {
   alert(
     `O personagem ${nameCharacterAttack} deu ${resultAttack} de dano no personagem ${nameCharacterDef}`
   );
 
   resultAttacklife = pointsOfLife - resultAttack;
   realAttack = resultAttack;
-} else if (powerofAttack > pointsOfDef && shield === true) {
+} else if ((powerofAttack > pointsOfDef) && (shield == 1)) {
   alert(
     `O personagem ${nameCharacterAttack} deu ${
       resultAttack / 2
@@ -50,13 +54,11 @@ if (powerofAttack > pointsOfDef && shield === false) {
 alert(`-- Pers. Ataque --\n
       Nome do personagem de ataque ${nameCharacterAttack}\n
       Poder de ataque do personagem de ataque ${powerofAttack}\n
-      ---\n
       -- Pers. Defesa --\n
       Nome do personagem de defesa ${nameCharacterDef}\n
-      Pontos vida do personagem de defesa${pointsOfLife}\n
+      Pontos vida do personagem de defesa ${pointsOfLife}\n
       Pontos de defesa do personagem de defesa ${pointsOfDef}\n
       O personagem de defesa tem escudo? ${wordShield}\n
-      ---\n
       -- Batalha --\n
       O personagem de ataque deu ${realAttack} de dano\n
-      O personagem de defesa tomou ${resultAttacklife} de pontos de vida`);
+      O personagem de defesa ficou com ${resultAttacklife} de pontos de vida\n`);
