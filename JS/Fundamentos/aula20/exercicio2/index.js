@@ -17,7 +17,7 @@ let pointsOfDef = prompt(
   `Informe quantos pontos de defesa tem esse personagem: ${nameCharacterDef}`
 );
 let shield = prompt(
-  `O personagem ${nameCharacterDef} possui escudo? 1 para sim | 2 para não: `
+  `O personagem ${nameCharacterDef} possui escudo? (Sim/Nao ou (S/N): ) `
 );
 
 resultAttack = powerofAttack - pointsOfDef;
@@ -26,7 +26,7 @@ resultAttackS = resultAttack / 2;
 powerofAttack = parseInt(powerofAttack)
 pointsOfDef = parseInt(pointsOfDef)
 
-if (shield == 1) {
+if ((shield == 'Sim') || shield == 's') {
   wordShield = "Sim";
 } else {
   wordShield = "Nao";
