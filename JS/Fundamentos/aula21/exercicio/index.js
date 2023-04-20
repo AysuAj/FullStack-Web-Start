@@ -14,7 +14,7 @@ const medidas = prompt(
 
 valueMetros = parseFloat(valueMetros)
 
-switch (valueMetros) {
+switch (medidas) {
   case 'mm':
     valueConv = valueMetros*1000
     break
@@ -37,7 +37,7 @@ switch (valueMetros) {
     alert("Opção inválida")
 }
 
-alert(
-      `Valor em metros: ${valueMetros}m
-       Valor convertido para ${medidas}: ${valueConv}`
-     )
+alert(`
+      Valor em metros: ${valueMetros}m
+      Valor convertido para ${medidas}: ${valueConv}
+      `)
