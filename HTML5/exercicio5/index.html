@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+</head>
+
+<body>
+    <h1>Formulário de inscrição</h1>
+    <form action="">
+        <div>
+            <label for="select-name">Nome:</label><br>
+            <input type="text" name="name" id="select-name" required placeholder="Nome">
+        </div>
+        <br>
+        <div>
+            <label for="select-email">Email:</label><br>
+            <input type="email" id="select-email" name="email" required placeholder="Email">
+        </div>
+        <br>
+        <div>
+            <label for="select-numero">Whatsapp:</label><br>
+            <input type="tel" id="select-numero" name="telefone" placeholder="Telefone/Celular" required>
+        </div>
+        <br>
+        <div>
+            <label for="select-atuacao">Área de atuação:</label><br>
+            <input type="radio" id="select-dev" name="area" value="dev" required>
+            <label for="select-dev">Desenvolvimento</label>
+            <input type="radio" id="select-qa" name="area" value="qa" required>
+            <label for="select-qa">Quality Assurance(QA)</label>
+            <input id="select-ad" type="radio" name="area" value="ad" required>
+            <label for="select-ad">Análise de Dados</label>
+            <input type="radio" id="select-infra" name="area" value="infra" required>
+            <label for="select-infra">Infraestrutura</label>
+        </div>
+        <br>
+        <div>
+            <label for="select-obs">Observações:</label><br>
+            <textarea name="observacao" id="select-obs" cols="30" rows="5"
+                placeholder="Nos diga algumas observações"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="select-nov" name="checkbox" value="novidades">
+            <label for="select-nov">Desejo receber novidades e ofertas por email</label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+
+</html>

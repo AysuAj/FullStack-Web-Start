@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Desenvolvedor</title>
+</head>
+
+<body>
+    <h1>FORMULÁRIO DE DESENVOLVEDOR</h1>
+    <form action="">
+        <div>
+            <label for="select-name">Nome:</label>
+            <input id="select-name" type="text" name="name" required autocomplete="on" placeholder="Nome">
+            <label for="select-sobrenome">Sobrenome:</label>
+            <input id="select-sobrenome" type="text" name="sobrenome" required autocomplete="on"
+                placeholder="Sobrenome">
+        </div>
+        <br>
+        <div>
+            <label for="select-email">Email:</label>
+            <input id="select-email" type="email" name="email" autocomplete="on" required placeholder="Email">
+            <label for="select-password">Senha:</label>
+            <input type="password" id="select-password" name="password" required placeholder="Senha">
+        </div>
+        <br>
+        <div>
+            <label>Gênero:</label>
+            <input id="select-male" type="radio" name="gender" value="Male">
+            <label for="select-male">Masculino</label>
+            <input id="select-female" type="radio" name="gender" value="Female">
+            <label for="select-female">Feminino</label>
+        </div>
+        <br>
+        <div>
+            <label for="select-birthday">Data de Aniversário:</label>
+            <input type="date" name="birthday" id="select-birthday">
+
+            <label>Interesses:</label>
+            <input type="checkbox" name="interesse1" value="backend" id="select-backend">
+            <label for="select-backend">Backend</label>
+            <input type="checkbox" name="interesse2" value="frontend" id="select-frontend">
+            <label for="select-frontend">Frontend</label>
+            <input type="checkbox" id="select-fullstack" name="interesse3" value="fullstack">
+            <label for="select-fullstack">FullStack</label>
+        </div>
+        <br>
+        <div>
+            <label for="select-curriculo">Envie seu currículo:</label>
+            <input type="file" id="select-curriculo" name="curriculo">
+        </div>
+        <br><br>
+        <div>
+            <label for="select-formacao">Formação:</label>
+            <select id="select-formacao" name="formacao">
+                <option value="" disabled selected>Selecione sua formação...</option>
+                <option value="Ensino Fundamental">Ensino Fundamental</option>
+                <option value="Ensino Medio">Ensino Médio</option>
+                <option value="Ensino Tecnico">Ensino Técnico</option>
+                <option value="Ensino Superior">Ensino Superior</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <div>
+                <label for="select-obes">Cite uma observação:</label>
+            </div>
+            <div>
+                <textarea name="observacao" id="select-obes" cols="40" rows="10"
+                    placeholder="Cite-nos uma observação"></textarea>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
