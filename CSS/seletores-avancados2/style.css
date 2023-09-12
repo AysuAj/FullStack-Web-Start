@@ -1,0 +1,12 @@
+ul li {
+  color: red;
+  font-size: 30px;
+}
+
+#li-1 {
+  color: blue;
+}
+
+ol > p {
+  color: green;
+}

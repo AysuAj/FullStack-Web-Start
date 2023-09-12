@@ -1,0 +1,15 @@
+body {
+  background-image: url("https://images.alphacoders.com/113/1130028.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+li {
+  color: white;
+}
+
+h1 {
+  border: 2px solid yellow;
+}
