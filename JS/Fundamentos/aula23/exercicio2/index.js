@@ -16,6 +16,12 @@ do {
                 Escolha:
                 `)
 
+  console.log('teste')
+  421424242121421412
+  window.alert('teste')
+
+  Object.freeze()
+
   menuC = parseInt(menu)
   switch (menuC) {
     case 1:
