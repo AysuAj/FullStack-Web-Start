@@ -1,0 +1,37 @@
+#div-principal {
+  background-color: rgb(48, 48, 48);
+  margin: 0px auto 0px auto;
+  width: 70%;
+  color: white;
+}
+
+body {
+  background-color: rgb(46, 46, 46);
+  margin-top: 0px;
+}
+
+p[class="date-style"] + h1 {
+  font-family: "Montserrat";
+}
+
+.date-style {
+  font-family: "Roboto";
+  color: #a3ffff;
+}
+
+p[class="date-style"] + h1 + p {
+  font-family: "Open Sans";
+}
+
+.div-secoes {
+  padding: 40px;
+  border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+div[none-border] {
+  border-bottom: none;
+}
+
+#top-border-level {
+  padding-top: 20px;
+}

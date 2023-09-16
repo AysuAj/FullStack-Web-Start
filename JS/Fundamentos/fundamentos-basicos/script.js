@@ -1,11 +1,14 @@
-console.log("teste de código js")
+const currentYear = new Date()
 
-console.log('teste')
+let nome = prompt("Informe seu nome: ")
+let sobrenome = prompt("Informe seu sobrenome: ")
+let estudo = prompt('Informe seu campo de estudo: ')
+let anoDeNascimento = prompt('Informe seu ano de  nascimento: ')
 
-console.error('teste método error')
-console.warn('Teste método aviso')
+const idade = currentYear.getFullYear() - anoDeNascimento
 
-alert('teste método alerta')
-confirm('teste método confirmação')
+alert(`Seu nome completo é ${nome} ${sobrenome}
+Está estudando atualmente ${estudo}
+Você tem ${idade} anos de idade.`)
 
 
