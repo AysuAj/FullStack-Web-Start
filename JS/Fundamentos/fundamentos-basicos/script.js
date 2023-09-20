@@ -1,14 +1,11 @@
-const currentYear = new Date()
+/*let numeros = [1, 2, 3, 4, [5, 6, 7, [8, 9, 10], 11, 12], 13, 14, 15]
 
-let nome = prompt("Informe seu nome: ")
-let sobrenome = prompt("Informe seu sobrenome: ")
-let estudo = prompt('Informe seu campo de estudo: ')
-let anoDeNascimento = prompt('Informe seu ano de  nascimento: ')
+console.log(numeros[4][3][1])
 
-const idade = currentYear.getFullYear() - anoDeNascimento
-
-alert(`Seu nome completo é ${nome} ${sobrenome}
-Está estudando atualmente ${estudo}
-Você tem ${idade} anos de idade.`)
-
-
+*/
+let pessoa = {
+    nome: 'Alessander',
+    idade: '23',
+    peso: 57,
+    altura: 1.77,
+}
