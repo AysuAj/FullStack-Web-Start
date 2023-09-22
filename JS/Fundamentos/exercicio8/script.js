@@ -45,16 +45,32 @@ while (validar === true) {
             imoveis.garagem = 'Não possui garagem'
         }
 
-        armazenamentoImoveis.push(imoveis)
+        let confirmacao = confirm(`
+        Deseja salvar este imóvel?
+
+        Proprietário: ${imoveis.proprietario}
+        Quant. Quartos: ${imoveis.quantidadeQuartos}
+        Quant. Banheiros: ${imoveis.quantidadeBanheiros}
+        Garagem:${imoveis.garagem}
+        `)
+        if (confirmacao == true) {
+            armazenamentoImoveis.push(imoveis)
+            alert('Usuário salvo com sucesso!')
+        } else {
+            alert('Usuário não confirmou salvar o usuário.')
+            alert('Voltando para o menu principal!')
+        }
+
 
     } else if (choose == '2') {
         for (let i = 0; i < armazenamentoImoveis.length; i++) {
             stringArray +=
                 `
+            Imóvel ID ${i + 1}
             Proprietário: ${armazenamentoImoveis[i].proprietario}
             Quant. banheiros: ${armazenamentoImoveis[i].quantidadeBanheiros}
             Quant. quartos: ${armazenamentoImoveis[i].quantidadeQuartos}
-            Possui garagem: ${armazenamentoImoveis[i].garagem}
+            Garagem: ${armazenamentoImoveis[i].garagem}
             `
         }
         alert(stringArray)
