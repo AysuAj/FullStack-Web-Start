@@ -1,28 +1,42 @@
-function cadastro(nome, idade, altura, peso) {
-    let pessoa = {
-        nome,
-        idade,
-        altura,
-        peso,
+let pessoas = [
+    {
+        nome: 'Alessander',
+        idade: '23',
+        peso: 56,
+        altura: 1.77,
+        formacao: 'Técnico',
+        area: 'TI'
+    },
+    {
+        nome: 'Viego',
+        idade: 200,
+        peso: 82,
+        altura: 1.92,
+        formacao: 'alma',
+        area: 'Sombra'
+    },
+    {
+        nome: 'Kindred',
+        idade: 1000,
+        peso: 50,
+        altura: 1.58,
+        formacao: 'morte',
+        area: 'sombria'
+    },
+    {
+        nome: 'Aatrox',
+        idade: 1000,
+        peso: 250,
+        altura: 2.38,
+        formacao: 'inferno',
+        area: 'fogo'
     }
-    console.log(validarIdade(idade))
+]
 
-    return pessoa
-}
+let lista = [1, 5, 7, 4, 2, 12]
 
-function validarIdade(idade) {
-    if (idade >= 18) {
-        return 'Você tem mais de 18 anos de idade.'
-    } else {
-        return 'Você tem menos de 18 anos de idade.'
-    }
+let fnFilter = pessoas.forEach(function (elemento) {
+    return elemento.idade > 500 ? elemento.status = 'velho' : elemento.status ='não é velho'
+})
 
-}
-
-let nome = prompt('Informe seu nome: ')
-let idade = prompt('Informe sua idade: ')
-let altura = prompt('Informe sua altura: ')
-let peso = prompt('Informe seu peso: ')
-
-
-console.log(cadastro(nome, idade, altura, peso))
+console.log(fnFilter)
