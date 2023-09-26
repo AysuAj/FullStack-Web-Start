@@ -77,7 +77,6 @@ function vagasDisponiveis() {
 }
 
 function novaVaga(nome, descricao, dataLimite, confirmar) {
-
     if (confirmar == true) {
         vagas.push({
             indice: vagas.length - 1,
@@ -97,17 +96,7 @@ function visualizarVaga(visuVaga) {
     let vagaConcat = ''
     let ind
     let uniqVaga = vagas.filter(function (elemento, indice, array) {
-        if (elemento.nome == visuVaga) {
-            ind = indice
-            vagaConcat += `
-            Índice: ${indice}
-            Nome da Vaga: ${elemento.nome}
-            Descrição da vaga: ${elemento.descricao}
-            Data Limite: ${elemento.dataLimite}
-            Nome candidatos: ${elemento.candidato} 
-            `
-
-        } else if (indice == visuVaga) {
+        if (indice == visuVaga) {
             ind = indice
             vagaConcat += `
             Índice: ${indice}
@@ -137,12 +126,14 @@ function inscricaoCandidatoVaga(nome, vaga) {
             Nome da Vaga: ${elemento.nome}
             Descrição da vaga: ${elemento.descricao}
             Data Limite: ${elemento.dataLimite}
+
+            Deseja confirmar o cadastro do ${nome} dentro da vaga ${vaga}?
             `
             elemento.candidato.push(nome)
         }
     })
     if (ind == vaga) {
-        alert(inscCandidatoVaga)
+        confirm(inscCandidatoVaga)
     } else {
         alert('Vaga não disponível!')
         alert('Voltando para o menu principal...')
@@ -150,17 +141,26 @@ function inscricaoCandidatoVaga(nome, vaga) {
 }
 
 function excluirVaga(excVaga) {
+    let confirmar
     vagas.filter(function (elemento, indice, array) {
         if (indice == excVaga) {
             vagas.pop(indice)
-            let confirmar = confirm(`
+            confirmar = confirm(`
             A vaga abaixo será excluída do sistema
             Índice: ${indice}
             Nome da Vaga: ${elemento.nome}
             Descrição da vaga: ${elemento.descricao}
             Data Limite: ${elemento.dataLimite}
             Nome candidatos: ${elemento.candidato}
+
+            Deseja excluir a vaga selecionada?
             `)
+        }
+        if (confirmar == true) {
+            alert('Vaga excluída com sucesso!')
+
+        } else {
+            alert('A exclusão da vaga foi cancelada.')
         }
     })
     alert('Vaga excluída com sucesso!')
