@@ -36,7 +36,7 @@ let pessoas = [
 let lista = [1, 5, 7, 4, 2, 12]
 
 let fnFilter = pessoas.forEach(function (elemento) {
-    return elemento.idade > 500 ? elemento.status = 'velho' : elemento.status ='não é velho'
+    return elemento.idade > 500 ? elemento.status = 'velho' : elemento.status = 'não é velho'
 })
 
 console.log(fnFilter)
