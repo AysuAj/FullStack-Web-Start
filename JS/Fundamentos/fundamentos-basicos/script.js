@@ -1,42 +1,16 @@
-let pessoas = [
-    {
-        nome: 'Alessander',
-        idade: '23',
-        peso: 56,
-        altura: 1.77,
-        formacao: 'Técnico',
-        area: 'TI'
-    },
-    {
-        nome: 'Viego',
-        idade: 200,
-        peso: 82,
-        altura: 1.92,
-        formacao: 'alma',
-        area: 'Sombra'
-    },
-    {
-        nome: 'Kindred',
-        idade: 1000,
-        peso: 50,
-        altura: 1.58,
-        formacao: 'morte',
-        area: 'sombria'
-    },
-    {
-        nome: 'Aatrox',
-        idade: 1000,
-        peso: 250,
-        altura: 2.38,
-        formacao: 'inferno',
-        area: 'fogo'
-    }
-]
+console.log('teste')
 
-let lista = [1, 5, 7, 4, 2, 12]
+const profissao = document.getElementById('lista-profissao')
+console.log(profissao)
 
-let fnFilter = pessoas.forEach(function (elemento) {
-    return elemento.idade > 500 ? elemento.status = 'velho' : elemento.status = 'não é velho'
-})
+const areaProfissao = document.getElementsByClassName('lista-area')
+console.log(areaProfissao)
 
-console.log(fnFilter)
+function criarElemento() {
+    const elementoArea = document.getElementById('teste')
+    console.log(elementoArea)
+    const elementoNode = document.createElement('li')
+    console.log(elementoNode)
+    elementoNode.innerText = 'NodeJS'
+    elementoArea.append(elementoNode)
+}
