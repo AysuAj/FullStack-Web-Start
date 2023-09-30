@@ -13,19 +13,19 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum enim blanditiis natus quaerat, eligendi nam
         repudiandae obcaecati magnam laudantium quidem alias exercitationem autem, consequatur debitis vitae illum dolor
         hic. Delectus?</p>
-    <ul>
-        <li class="lista-profissao">Dev</li>
-        <ul>
-            <li class="lista-area" id="teste" onclick="criarElemento()">Front-End</li>
-            <ul>
+    <ul id="profissoes">
+        <li>Dev</li>
+        <ul id="areas">
+            <li onclick="criarArea()">Frontend</li>
+            <ul class="tecnologias">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JS</li>
             </ul>
         </ul>
         <ul>
-            <li>BackEnd</li>
-            <ul>
+            <li onclick="criarArea1()">BackEnd</li>
+            <ul class="tecnologias">
                 <li>C#</li>
                 <li>Java</li>
                 <li>Python</li>
