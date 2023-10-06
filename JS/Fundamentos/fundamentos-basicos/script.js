@@ -1,18 +1,41 @@
-function criarArea() {
-    const tecnologias = document.getElementsByClassName('tecnologias')
-    const elementoAngular = document.createElement('li')
-    elementoAngular.id = 'angulas'
-    elementoAngular.innerText = 'AngularJS'
-    tecnologias[0].appendChild(elementoAngular)
+const testEvent = document.getElementById('testEvent')
+
+function cadastro(ev) {
+    console.log(ev)
+    const teste = ev.currentTarget.parentNode
+    console.log(teste)
 }
 
-function criarArea1() {
-    const tecnologias = document.getElementsByClassName('tecnologias')
-    const elementNode = document.createElement('li')
-    console.log(elementNode)
-    elementNode.id = 'node'
-    elementNode.innerText = 'NodeJS'
-    tecnologias[1].appendChild(elementNode)
-    const teste = document.getElementById('teste')
-    tecnologias[1].removeChild(teste)
+function cadastro1(ev) {
+    const body = ev.currentTarget.parentNode.children
+    const name = body.name.value
+    const password = body.password.value
+    const age = body.idade.value
+
+    console.log(`
+    Nome: ${name}
+    Senha: ${password}
+    const: ${parseInt(age) + 20}
+    `)
+    if (age > 20) {
+        alert('Maior de idade')
+
+    } else {
+        alert('Menor de idade')
+    }
 }
+
+testEvent.addEventListener('contextmenu', cadastro)
+
+testEvent.addEventListener('click', cadastro1)
+
+const removeEvent = document.getElementById('removeEvent')
+
+removeEvent.addEventListener('click', function () {
+    testEvent.removeEventListener('contextmenu', cadastro)
+
+})
+
+removeEvent.addEventListener('click', function () {
+    testEvent.removeEventListener('click', cadastro1)
+})

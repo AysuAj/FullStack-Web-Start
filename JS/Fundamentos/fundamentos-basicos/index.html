@@ -4,34 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Script JS</title>
-    <script src="script.js"></script>
+    <title>Teste</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>TESTE DE DOMS</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum enim blanditiis natus quaerat, eligendi nam
-        repudiandae obcaecati magnam laudantium quidem alias exercitationem autem, consequatur debitis vitae illum dolor
-        hic. Delectus?</p>
-    <ul id="profissoes">
-        <li>Dev</li>
-        <ul id="areas">
-            <li onclick="criarArea()">Frontend</li>
-            <ul class="tecnologias">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-            </ul>
-        </ul>
-        <ul>
-            <li onclick="criarArea1()">BackEnd</li>
-            <ul class="tecnologias">
-                <li>C#</li>
-                <li>Java</li>
-                <li>Python</li>
-            </ul>
-        </ul>
-
+    <h1 id="teste">Teste Elementos</h1>
+    <label for="namePerson">Nome:</label>
+    <input type="text" id="namePerson" name="name">
+    <label for="selectPassword">Senha:</label>
+    <input type="password" id="selectPassword" name="password">
+    <label for="selectIdade">Idade:</label>
+    <input type="number" id="selectIdade" name="idade">
+    <button id="testEvent">Teste</button>
+    <button id="removeEvent">Remover Evento</button>
 </body>
 
 </html>
