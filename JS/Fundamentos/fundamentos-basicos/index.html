@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Cadastro</title>
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1 id="teste">Teste Elementos</h1>
-    <label for="namePerson">Nome:</label>
-    <input type="text" id="namePerson" name="name">
+    <h1>Cadastro de usuário</h1>
+    <label for="selectLogin">Login:</label>
+    <input type="text" id="selectLogin" name="login" required>
     <label for="selectPassword">Senha:</label>
-    <input type="password" id="selectPassword" name="password">
-    <label for="selectIdade">Idade:</label>
-    <input type="number" id="selectIdade" name="idade">
-    <button id="testEvent">Teste</button>
-    <button id="removeEvent">Remover Evento</button>
+    <input type="password" id="selectPassword" name="password" required>
+    <label for="selectPasswordConfirm">Confirmar Senha:</label>
+    <input type="password" id="selectPasswordConfirm" name="passwordConfirm">
+    <br>
+    <button id="validateData">Enviar</button>
 </body>
 
 </html>
