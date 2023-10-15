@@ -1,62 +1,101 @@
 const addTech = document.getElementById('addTech')
+const listDevs = []
+const listNamesTech = []
+const listExperienceTech = []
+const opcoes = ['0-2 anos', '3-4 anos', '5+ anos']
+let contTech = 0
+const option = []
 
 addTech.addEventListener('click', addTechFunction)
 
 function addTechFunction(ev) {
     ev.preventDefault()
-    const formDev = document.getElementById('formDev')
-    const divTech = document.createElement('div')
-    divTech.id = 'styleDivTech'
-    formDev.append(divTech)
+    const featuresTech = document.getElementById('featuresTech')
+    const divMain = document.createElement('div')
+    featuresTech.append(divMain)
+    divMain.id = 'divMain'
+    addTechName(divMain)
+    addTimeExperience(divMain)
+    contTech++
+    const submitDev = document.getElementById('submitDev')
+    submitDev.addEventListener('click', addSubmitDev)
+}
 
-    const divNameTech = document.createElement('div')
-    divNameTech.id = 'styleDivNameTech'
-    divTech.append(divNameTech)
-    divNameTech.innerHTML = '<label for="selectNameTech">Nome da Tecnologia: </label>'
-    const inputNameTech = document.createElement('input')
-    inputNameTech.id = 'selectNameTech'
-    inputNameTech.name = 'nameTech'
-    inputNameTech.type = 'text'
-    divNameTech.append(inputNameTech)
+function addTechName(divMain) {
+    const liTechName = document.createElement('li')
+    liTechName.style = 'margin: 20px'
+    divMain.append(liTechName)
+    const labelTechName = document.createElement('label')
+    labelTechName.setAttribute('for', `selectTechName${contTech}`)
+    labelTechName.innerText = 'Nome da Tecnologia: '
+    liTechName.append(labelTechName)
+    const inputTechName = document.createElement('input')
+    inputTechName.id = `selectTechName${contTech}`
+    inputTechName.type = 'text'
+    inputTechName.name = 'nameTech'
+    liTechName.append(inputTechName)
+}
 
-    const divExperienceTech = document.createElement('div')
-    divExperienceTech.id = 'styleDivExperienceTech'
-    divTech.append(divExperienceTech)
-    divExperienceTech.innerHTML = '<label for="selectExperienceTech">Tempo de experiência: </label'
-    const inputExperienceTech = document.createElement('input')
-    inputExperienceTech.id = 'selectExperienceTech'
-    inputExperienceTech.name = 'experienceTech'
-    inputExperienceTech.type = 'number'
-    divExperienceTech.append(inputExperienceTech)
+function addTimeExperience(divMain) {
+    const liTimeExperience = document.createElement('li')
+    liTimeExperience.style = 'margin: 20px 20px 30px 20px'
+    divMain.append(liTimeExperience)
+    const labelTimeExperience = document.createElement('label')
+    labelTimeExperience.setAttribute('for', 'selectTimeExperience')
+    labelTimeExperience.innerText = 'Tempo de Experiência: '
+    liTimeExperience.append(labelTimeExperience)
+    addOptionsTimeExperience(liTimeExperience)
+    addButtonRemove(divMain)
+}
 
-    const buttonAddNameExperience = document.createElement('button')
-    buttonAddNameExperience.id = 'buttonAddNameExperience'
-    buttonAddNameExperience.innerText = 'Enviar Tecnologia'
-    buttonAddNameExperience.onclick = function () {
-        const name = inputNameTech.value
-        const experience = inputExperienceTech.value
+function addOptionsTimeExperience(liTimeExperience) {
+    for (let ind = 0; ind < opcoes.length; ind++) {
+        const inputTimeExperienceOptions = document.createElement('input')
+        inputTimeExperienceOptions.id = `selectTimeExperienceOptions${contTech}_${ind}`
+        inputTimeExperienceOptions.type = 'radio'
+        inputTimeExperienceOptions.name = `timeExperienceOptions${contTech}`
+        inputTimeExperienceOptions.value = opcoes[ind]
+        liTimeExperience.append(inputTimeExperienceOptions)
+        const labelTimeExperienceOptions = document.createElement('label')
+        labelTimeExperienceOptions.innerText = opcoes[ind]
+        labelTimeExperienceOptions.setAttribute('for', `selectTimeExperienceOptions${contTech}_${ind}`)
+        liTimeExperience.append(labelTimeExperienceOptions)
+        if (inputTimeExperienceOptions.checked) {
+            option.push(inputTimeExperienceOptions.value)
+        }
 
-        console.log(`
-        name adicionado = ${name}
-        exp adicionado = ${experience}
-        `)
-        return false
     }
-    divTech.append(buttonAddNameExperience)
 
-    const buttonRemoveNameExperience = document.createElement('button')
-    buttonRemoveNameExperience.id = "buttonRemoveNameExperience"
-    buttonRemoveNameExperience.innerText = 'Remover Tecnologia'
-    buttonRemoveNameExperience.onclick = function () {
-        const name = inputNameTech.value
-        const experience = inputExperienceTech.value
+}
 
-        console.log(`
-        name removido = ${name}
-        exp removido = ${experience}
-        `)
+function addButtonRemove(divMain) {
+    const liButtonRemove = document.createElement('li')
+    divMain.append(liButtonRemove)
+    const buttonRemove = document.createElement('button')
+    buttonRemove.innerText = 'Remover'
+    liButtonRemove.append(buttonRemove)
+    buttonRemove.addEventListener('click', function (ev) {
+        ev.preventDefault()
+        const parent = ev.currentTarget.parentNode.parentNode
+        parent.remove()
+    })
+}
 
-        return false
+function addSubmitDev(ev) {
+    ev.preventDefault()
+    const inputFullName = document.querySelector('input[name="fullName"]')
+    const fullName = inputFullName.value
+    const inputNameTech = document.querySelectorAll('input[name="nameTech"]')
+    inputNameTech.forEach(function (element) {
+        listNamesTech.push(element.value)
+    })
+    console.log(listNamesTech)
+    for (let ind = 0; ind < contTech; ind++) {
+        const inputTimeExperience = document.querySelector(`input[name="timeExperienceOptions${ind}"`)
+        if (inputTimeExperience.checked) {
+            listExperienceTech.push(inputTimeExperience.value)
+        }
     }
-    divTech.append(buttonRemoveNameExperience)
+    console.log(listExperienceTech)
+    console.log(option)
 }

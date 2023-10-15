@@ -7,48 +7,42 @@
     <title>Cadastro de Devs</title>
     <script src="script.js" defer></script>
     <style>
-        #styleDiv {
-            margin: 20px;
-
+        #addTech {
+            margin: 30px 0px 20px 10px;
         }
 
-        #styleDivTech {
-            margin-bottom: 50px;
-            padding: 20px;
+        #submitDev {
+            margin: 30px;
+        }
+
+        #divMain {
             border-left: 2px solid black;
-        }
-
-        #styleDivNameTech {
-            padding: 10px;
-            margin: 10px;
-        }
-
-        #styleDivExperienceTech {
-            padding: 10px;
-            margin: 10px;
-        }
-
-        #buttonAddNameExperience {
-            margin: 10px;
-        }
-
-        #buttonRemoveNameExperience {
-            margin: 10px;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>CADASTRO DE DEVS</h1>
-    <form id="formDev">
+    <h1>Exercício 12 - Cadastro de Devs</h1>
+    <br>
+    <hr>
+    <h2>Cadastrar novo Desenvolvedor</h2>
+    <form>
         <div>
-            <label for="selectName">Nome Completo:</label>
-            <input type="text" name="name" id="selectName">
+            <label for="selectFullName">Nome Completo: </label>
+            <input type="text" id="selectFullName" name="fullName">
         </div>
-        <div id="styleDiv">
+        <div>
             <button id="addTech">Adicionar Tecnologia</button>
         </div>
+        <div>
+            <ul id="featuresTech" type="none"></ul>
+        </div>
+        <div>
+            <button id="submitDev">Cadastrar Dev</button>
+        </div>
     </form>
+
 </body>
 
 </html>
