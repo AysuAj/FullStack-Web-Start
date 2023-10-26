@@ -1,0 +1,25 @@
+#game {
+  width: 603px;
+  height: 500px;
+  border: solid 3px;
+}
+
+.data-row {
+  height: 166px;
+  border-bottom: solid 1px;
+}
+
+.data-element {
+  width: 200px;
+  height: 100%;
+  border-right: solid 1px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+}
+
+#namesPlayers {
+  margin: 20px;
+}

@@ -1,10 +1,9 @@
 const addTech = document.getElementById('addTech')
 const listDevs = []
-const listNamesTech = []
-const listExperienceTech = []
+let listNamesTech = []
+let listExperienceTech = []
 const opcoes = ['0-2 anos', '3-4 anos', '5+ anos']
 let contTech = 0
-const option = []
 
 addTech.addEventListener('click', addTechFunction)
 
@@ -19,6 +18,7 @@ function addTechFunction(ev) {
     contTech++
     const submitDev = document.getElementById('submitDev')
     submitDev.addEventListener('click', addSubmitDev)
+    console.log(listDevs)
 }
 
 function addTechName(divMain) {
@@ -60,9 +60,6 @@ function addOptionsTimeExperience(liTimeExperience) {
         labelTimeExperienceOptions.innerText = opcoes[ind]
         labelTimeExperienceOptions.setAttribute('for', `selectTimeExperienceOptions${contTech}_${ind}`)
         liTimeExperience.append(labelTimeExperienceOptions)
-        if (inputTimeExperienceOptions.checked) {
-            option.push(inputTimeExperienceOptions.value)
-        }
 
     }
 
@@ -89,13 +86,24 @@ function addSubmitDev(ev) {
     inputNameTech.forEach(function (element) {
         listNamesTech.push(element.value)
     })
-    console.log(listNamesTech)
+
     for (let ind = 0; ind < contTech; ind++) {
-        const inputTimeExperience = document.querySelector(`input[name="timeExperienceOptions${ind}"`)
-        if (inputTimeExperience.checked) {
-            listExperienceTech.push(inputTimeExperience.value)
+        const valueTimeExperience = document.querySelector(`input[name="timeExperienceOptions${ind}"]:checked`)
+        if (valueTimeExperience) {
+            listExperienceTech.push(valueTimeExperience.value)
         }
     }
-    console.log(listExperienceTech)
-    console.log(option)
+    listDevs.push({ fullname: fullName, namesTechs: listNamesTech, timeExperience: listExperienceTech })
+    alert('Dev cadastrado com sucesso!')
+    inputFullName.value = ''
+    deleteDivMain()
+}
+
+function deleteDivMain() {
+    const divMain = document.querySelectorAll('#divMain')
+    divMain.forEach(function (element) {
+        element.remove()
+    })
+    listExperienceTech = []
+    listNamesTech = []
 }
