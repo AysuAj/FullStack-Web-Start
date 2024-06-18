@@ -1,0 +1,46 @@
+footer {
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  left: 20%;
+  right: 20%;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 10px;
+  font-family: Roboto;
+}
+
+#menu {
+  position: relative;
+  display: inline-block;
+  left: 30%;
+}
+
+#inicio {
+  display: inline-block;
+}
+
+#menu li {
+  display: inline-block;
+  padding: 20px;
+  position: relative;
+}
+
+#menu a {
+  color: white;
+  text-decoration: unset;
+  list-style-type: none;
+}
+
+#menu a:hover {
+  border: 2px solid rgb(136, 136, 136);
+  border-radius: 7px;
+  padding: 5px 2px 5px 2px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bolder;
+}
